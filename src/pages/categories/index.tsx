@@ -48,20 +48,20 @@ function Categories() {
                             <p><RightOutlined /></p>
                           </li>
                           <li>
-                            <p>Shirts</p>
+                            <p>Trousers</p>
                             <p><RightOutlined /></p>
                           </li>
                           <li>
-                            <p>Hoodie</p>
+                            <p>Jackets</p>
                             <p><RightOutlined /></p>
                           </li>
                           <li>
-                            <p>Jeans</p>
+                            <p>Hoodies</p>
                             <p><RightOutlined /></p>
                           </li>
                         </ul>
                     </div>
-                    <h4>Price</h4>
+                    <h4>Summa</h4>
                     <Slider
                       className="slider"
                       range
