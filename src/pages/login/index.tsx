@@ -9,7 +9,7 @@ import { useNavigate } from "react-router-dom"
 function Login() {
   const navigate = useNavigate()
   function handleSubmit(e:any){
-    if(e.username.toLowerCase() == 'john32' && e.password.toLowerCase() == '87654321'){
+    if(e.username.toLowerCase() == 'admincls63' && e.password.toLowerCase() == 'cls063'){
       toast.success('Login successful', {autoClose: 1500})
       setTimeout(() => {
         navigate('/')
@@ -45,7 +45,7 @@ function Login() {
             </Form.Item>
             <Form.Item>
               <Button type="primary" htmlType="submit">
-                Log in
+                Login
               </Button>
             </Form.Item>
           </Form>

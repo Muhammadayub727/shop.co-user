@@ -1,14 +1,13 @@
 .login-wrapper {
     padding: 50px;
-    width: 100%;
-    height: auto;
+    width: 400px;
+    height: 400px;
     max-width: 500px;
     margin: 0 auto;
     margin-top: 100px;
     margin-bottom: 100px;
     border: none;
     border-radius: 30px;
-    background: linear-gradient(135deg, #a09a9a, #6588f0);
     color: #fff;
     position: relative;
     overflow: hidden;
@@ -21,14 +20,6 @@
         border-radius: 50%;
         background: rgba(255, 255, 255, 0.1);
         z-index: 1;
-    }
-
-    .input-login {
-        padding: 10px;
-
-        ::placeholder {
-            border: none;
-        }
     }
 
     &::before {
@@ -49,11 +40,19 @@
         text-align: center;
         margin-bottom: 30px;
         font-size: 2rem;
-        color: #fff;
+        color: #333;
         position: relative;
         z-index: 2;
         text-transform: uppercase;
         letter-spacing: 2px;
+    }
+
+    .input-login {
+        padding: 10px;
+
+        ::placeholder {
+            border: none;
+        }
     }
 
     button {
@@ -64,24 +63,19 @@
         height: 50px;
         border-radius: 25px;
         border: none;
-        transition: transform 0.3s ease, background 0.3s ease;
+        cursor: pointer;
 
         &:hover {
-            background: #ff4757;
-            color: #fff !important;
-            transform: scale(1.05);
+            background: #333;
+            color: #fff;
         }
     }
 
-    animation: float 6s ease-in-out infinite;
-
     @keyframes float {
-
         0%,
         100% {
             transform: translateY(0);
         }
-
         50% {
             transform: translateY(-20px);
         }
