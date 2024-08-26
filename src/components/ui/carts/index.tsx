@@ -17,10 +17,10 @@ function Carts({data}:any) {
     <div className='carts-wrapper'>
         <img src={data?.urls[0]} alt="no image" />        
         <div className='carts-midle'>
-            <h4>{data?.title}</h4>
-            <p>Size: <span>Large</span></p>
-            <p>Color: <span>Black</span></p>
-            <h3>${data?.price * count}</h3>
+            {/* <h4>{data?.title}</h4> */}
+            <p style={{fontSize: '24px'}}>Size: <span style={{fontSize: '18px'}}>Large</span></p>
+            <p style={{fontSize: '24px'}}>Color: <span style={{fontSize: '18px'}}>Black</span></p>
+            <h3 style={{fontSize: '24px'}}>${data?.price * count}</h3>
         </div>
         <div className='carts-end'>
             <DeleteOutlined onClick={() => deleteProduct()}/>

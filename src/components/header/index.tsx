@@ -43,11 +43,11 @@ function Header() {
               <Input className='header-search' placeholder='Search for products...' />
               
               <div className='cart-img-profile'>
-                <Badge className='badge' count={carts?.length}>
-                  <ShoppingOutlined onClick={() => navigate('/cart')} />
-                </Badge>
                 <Badge className='badge' count={likes?.length}>
                   <HeartOutlined onClick={() => navigate('/like')} />
+                </Badge>
+                <Badge className='badge' count={carts?.length}>
+                  <ShoppingOutlined onClick={() => navigate('/cart')} />
                 </Badge>
                 <Badge className='badge'>
                   <Link to="/login">
