@@ -1,11 +1,9 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
-import "swiper/css/pagination";
 import "swiper/css/navigation";
 
 import "./style.scss";
-
-import { Pagination, Navigation } from "swiper/modules";
+import { Navigation } from "swiper/modules";
 import { Rate } from "antd";
 import { CheckCircleOutlined } from "@ant-design/icons";
 
@@ -22,21 +20,18 @@ export default function App() {
         },
       }}
       spaceBetween={30}
-      pagination={{
-        clickable: true,
-      }}
-      navigation={true}
-      modules={[Pagination, Navigation]} 
+      navigation={true}  // Use Swiper's built-in navigation without specifying custom elements
+      modules={[Navigation]}
       className="mySwiper"
     >
-        {new Array(10).fill(null).map((_, index) => {
+      {new Array(10).fill(null).map((_, index) => {
         return (
           <SwiperSlide key={index}>
             <div className="customers-swiper">
               <Rate value={5} disabled />
               <div>
                 <h5>Sarah M.</h5>
-                <CheckCircleOutlined style={{color: '#01AB31'}}/>
+                <CheckCircleOutlined style={{ color: "#01AB31" }} />
               </div>
               <p>
                 "I'm blown away by the quality and style of the clothes I
@@ -47,7 +42,7 @@ export default function App() {
           </SwiperSlide>
         );
       })}
-      
+      {/* Navigation buttons will be automatically generated */}
     </Swiper>
   );
 }

@@ -106,8 +106,8 @@ function SinglePage() {
                     </div>
                     <div className='prices'>
                       <h4 className='price'>${product?.price}</h4>
-                      <h4 className='old-price'>${product?.oldPrice}</h4>
-                      <h4 className='sale'>-20%</h4>
+                      {/* <h4 className='old-price'>${product?.oldPrice}</h4> */}
+                      <h4 className='sale'>-2%</h4>
                     </div>
                     <p className="p-title">{product?.desc}</p>
                     
