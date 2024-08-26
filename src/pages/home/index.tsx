@@ -49,7 +49,7 @@ function Home() {
              </div>
 
              <Button onClick={() => limit == 99 ? setLimit(4) : setLimit(99)} style={{display: 'block', margin: '0 auto', marginTop: 51, height: 52, width: 218, borderRadius: 62}}>
-                  {limit == 4 ? 'View All' : 'Less Then'}
+                  {limit == 4 ? 'View All' : 'back'}
              </Button>
           </Container>
       </section>

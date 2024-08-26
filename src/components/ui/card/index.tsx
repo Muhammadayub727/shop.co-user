@@ -18,7 +18,7 @@ function Card(data:any) {
 
   function addCartt(){
     addCart(data?.data)
-    toast.success("Savatga qo'shildi")
+    toast.success("Added to cart!")
     checkCar()
   }
 
@@ -29,7 +29,7 @@ function Card(data:any) {
 
   function LikeAdd(){
     addLike(data?.data)
-    toast.success('Mahsulotni yoqtirdingiz!')
+    toast.success('You liked the product!')
     isLike()
   }
   useEffect(() => {
@@ -45,28 +45,27 @@ function Card(data:any) {
 
   return (
     <div className='card'>
+      <div onClick={() => navigate(`/page/${data?.data?._id}`)}>
         <img src={data?.data?.urls[0]} alt="NO IMAGE" />
+      </div>
         <div className='card-body'>
-            <h3>{title}</h3>
+            <h3 className='title'>{title}</h3>
             <div className='rating'>
               <Rate className='rate' value={rate} onChange={(e) => setRate(e)}/>
               <p>{rate}/<span style={{color: '#00000099'}}>5</span></p>
             </div>
             <div className='prices'>
               <h4 className='price'>${data?.data?.price}</h4>
-              <h4 className='old-price'>${data?.data?.oldPrice}</h4>
-              <h4 className='sale'>{data?.data?.sale}-20$</h4>
+              {/* <h4 className='old-price'>${data?.data?.oldPrice}</h4> */}
+              <h4 className='sale'>{data?.data?.sale}-2$</h4>
             </div>
             <button className='like' disabled={ischecklike} onClick={() => LikeAdd()}>
               <HeartOutlined/>
             </button>
-            <button disabled={check} onClick={() => addCartt()}>
+            <button disabled={check} onClick={() => addCartt()} style={{cursor: 'pointer', width: '40px', height: '40px', marginTop: '14px'}}>
               <ShoppingOutlined/>
             </button>
         </div>
-        <a href="#"> <div onClick={() => navigate(`/page/${data?.data?._id}`)} className='card-hover'>
-          Learn More
-        </div></a>
     </div>
   )
 }
